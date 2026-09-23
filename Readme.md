@@ -94,7 +94,7 @@ Installation
 Clone the repository and install the double-dummy solver dependency:
 
 Bash
-git clone https://github.com/your-username/bridge-slam-engine.git
+git clone https://github.com/pshaugh/bridge-slam-engine.git
 cd bridge-slam-engine
 pip install endplay
 
