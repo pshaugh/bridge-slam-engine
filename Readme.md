@@ -1,3 +1,7 @@
+Hello, changes have been made to make this more accessible! It now launches Bo Haglund's Double Dummy Solver when the program is run, and the edge case hunter is now actually included in the code (oops, sorry). Run the code in Colab, and you will get a results module of how well the engine did at bidding possible slams out of 200 hands... it seems to be around 90% accurate, sometimes getting as high as 95%. i'm actually new to this site, if you see anything i've done wrong in making this code accessible, please let me know.  Thanks, and enjoy!
+
+
+
 BridgeSlamEngine: Rule-Based Tri-Blueprint Auction System
 An architectural auction engine for bridge slam evaluation. Rather than relying purely on Milton Work High-Card Points (HCP) or exhaustive Monte Carlo tree searches, BridgeSlamEngine decomposes bidding decisions into three structural blueprints, an early Hazard Detection Sieve, and a strict Keycard/Control State Machine.
 
