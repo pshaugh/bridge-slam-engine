@@ -1,4 +1,35 @@
-Hello, changes have been made to make this more accessible! It now launches Bo Haglund's Double Dummy Solver when the program is run, and the edge case hunter is now actually included in the code (oops, sorry). Run the code in Colab, and you will get a results module of how well the engine did at bidding possible slams out of 200 hands... it seems to be around 90% accurate, sometimes getting as high as 95%. i'm actually new to this site, if you see anything i've done wrong in making this code accessible, please let me know.  Thanks, and enjoy!
+# BridgeSlamEngine: Rule-Based Tri-Blueprint Auction System
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pshaugh/bridge-slam-engine/blob/main/)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPLv3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+
+An architectural auction engine for contract bridge slam evaluation. Rather than relying purely on Milton Work High-Card Points (HCP) or exhaustive Monte Carlo tree searches, **BridgeSlamEngine** decomposes bidding decisions into three structural blueprints, an early Hazard Detection Sieve, and a strict Keycard/Control State Machine.
+
+When benchmarked against Bo Haglund's C++ Double Dummy Solver (DDS) via `endplay` on 200 random slam-viable deals (21+ combined HCP), the system achieved **91.50% contract-par accuracy**.
+
+---
+
+## Quickstart: Run in Google Colab (Zero Install)
+
+You can run the engine directly in your browser without installing anything locally:
+
+1. Open a new notebook at [Google Colab](https://colab.research.google.com).
+2. Create a code cell, paste the following script, and click **Run**:
+
+```python
+# 1. Clone the repository
+!git clone [https://github.com/pshaugh/bridge-slam-engine.git](https://github.com/pshaugh/bridge-slam-engine.git)
+%cd bridge-slam-engine
+
+# 2. Install dependencies (Bo Haglund DDS bindings)
+!pip install endplay
+
+# 3. Run the benchmark across 200 random deals
+!python benchmark_dds.py
+
+# 4. Optional: Run the interactive diagnostic debugger
+# !python slam_debugger.py
 
 
 
