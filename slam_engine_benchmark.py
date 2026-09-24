@@ -1,4 +1,4 @@
-!pip install -q endplay
+
 
 import random
 from dataclasses import dataclass, field
